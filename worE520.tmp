@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://ftueyn6uo2yg"]
+
+[ext_resource type="Texture2D" uid="uid://fwly4n7ppga6" path="res://icon.svg" id="1_53snh"]
+[ext_resource type="Script" path="res://PlayerMovement.gd" id="2_503pm"]
+[ext_resource type="Texture2D" uid="uid://c6d84c18tbah4" path="res://white-square-outline-png-6.jpg" id="3_8wgd6"]
+[ext_resource type="Script" path="res://NetMovement.gd" id="3_ai40w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4lkvv"]
+
+[node name="World" type="Node2D"]
+
+[node name="Player" type="Node2D" parent="."]
+script = ExtResource("2_503pm")
+
+[node name="Char1" type="CharacterBody2D" parent="Player"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Player/Char1"]
+texture = ExtResource("1_53snh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Char1"]
+scale = Vector2(5.92, 6.12)
+shape = SubResource("RectangleShape2D_4lkvv")
+
+[node name="Char2" type="CharacterBody2D" parent="Player"]
+position = Vector2(351, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Player/Char2"]
+texture = ExtResource("1_53snh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Char2"]
+scale = Vector2(5.92, 6.12)
+shape = SubResource("RectangleShape2D_4lkvv")
+
+[node name="Net" type="Node2D" parent="Player"]
+position = Vector2(174, 0)
+script = ExtResource("3_ai40w")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player/Net"]
+scale = Vector2(0.5, 0.02)
+texture = ExtResource("3_8wgd6")
