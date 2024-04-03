@@ -1,11 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://ftueyn6uo2yg"]
+[gd_scene load_steps=2 format=3 uid="uid://ftueyn6uo2yg"]
 
 [ext_resource type="PackedScene" uid="uid://bl3cvhmftviou" path="res://Scenes/player.tscn" id="1_nwtkb"]
-[ext_resource type="PackedScene" uid="uid://nl2u67hb47g" path="res://Scenes/fish.tscn" id="2_igjxv"]
 
 [node name="World" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_nwtkb")]
-
-[node name="Fish" parent="." instance=ExtResource("2_igjxv")]
-position = Vector2(210, 425)

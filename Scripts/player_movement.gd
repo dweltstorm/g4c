@@ -5,6 +5,7 @@ extends Node2D
 @onready var char1 : CharacterBody2D = $Char1
 @onready var char2 : CharacterBody2D = $Char2
 @onready var current_char : CharacterBody2D = char1
+@onready var fish = load("res://Scenes/fish.tscn")
 
 func get_input():
 	char1.velocity = Input.get_vector("left", "right", "up", "down") * 400
@@ -14,6 +15,10 @@ func _physics_process(_delta):
 	get_input()
 	char1.move_and_slide()
 	char2.move_and_slide()
+	
+	if Input.is_action_just_pressed("ui_accept"):
+		var new_fish = fish.instantiate()
+		get_parent().add_child(new_fish)
 	
 	var distance = char1.global_position.distance_to(char2.global_position)
 	
