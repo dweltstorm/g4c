@@ -18,6 +18,7 @@ func _physics_process(_delta):
 	
 	if Input.is_action_just_pressed("ui_accept"):
 		var new_fish = fish.instantiate()
+		new_fish.position.x = 1000
 		get_parent().add_child(new_fish)
 	
 	var distance = char1.global_position.distance_to(char2.global_position)
