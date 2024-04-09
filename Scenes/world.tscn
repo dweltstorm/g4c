@@ -5,3 +5,4 @@
 [node name="World" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_nwtkb")]
+position = Vector2(2.08165e-12, 2.08165e-12)
