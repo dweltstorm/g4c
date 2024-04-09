@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+#test
 var speed : float = 200
 @onready var target : Node2D = get_parent().get_node("Player").char1
 @onready var direction = (target.global_position - position).normalized()
