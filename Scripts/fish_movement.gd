@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Fish
 
 var speed : float = 200
 @onready var player : Node2D = get_parent().get_node("Player")

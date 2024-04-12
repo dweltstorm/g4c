@@ -27,3 +27,9 @@ func _physics_process(_delta):
 		var direction = (char2.global_position - char1.global_position).normalized()
 		var move_vector = direction * (distance - max_distance) * 0.5
 		char2.global_position -= move_vector
+	
+	
+
+
+func _on_net_body_entered(body: Node2D):
+	if body is Fish: body.queue_free()

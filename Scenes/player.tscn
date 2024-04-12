@@ -44,4 +44,4 @@ shape = SubResource("RectangleShape2D_7ujfb")
 scale = Vector2(0.5, 0.02)
 texture = ExtResource("4_hs6fe")
 
-[connection signal="area_entered" from="Net" to="." method="_on_net_area_entered"]
+[connection signal="body_entered" from="Net" to="." method="_on_net_body_entered"]
