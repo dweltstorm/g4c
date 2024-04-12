@@ -4,7 +4,7 @@ extends Node2D
 @export var max_distance : float = 500
 @onready var char1 : CharacterBody2D = $Char1
 @onready var char2 : CharacterBody2D = $Char2
-@onready var current_char : CharacterBody2D = char1
+@onready var net : Area2D = $Net
 @onready var fish = load("res://Scenes/fish.tscn")
 
 func get_input():
@@ -27,4 +27,3 @@ func _physics_process(_delta):
 		var direction = (char2.global_position - char1.global_position).normalized()
 		var move_vector = direction * (distance - max_distance) * 0.5
 		char2.global_position -= move_vector
-		

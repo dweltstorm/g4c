@@ -43,3 +43,5 @@ shape = SubResource("RectangleShape2D_7ujfb")
 [node name="Sprite2D" type="Sprite2D" parent="Net"]
 scale = Vector2(0.5, 0.02)
 texture = ExtResource("4_hs6fe")
+
+[connection signal="area_entered" from="Net" to="." method="_on_net_area_entered"]
